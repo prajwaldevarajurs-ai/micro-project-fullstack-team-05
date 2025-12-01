@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Your Exam Details</h2>
+
+{% if exam %}
+    <p>Subject: {{ exam.subject }}</p>
+    <p>Room Number: {{ exam.room }}</p>
+    <p>Seat Number: {{ exam.seat }}</p>
+{% else %}
+    <p>No exam assigned yet.</p>
+{% endif %}
+
+<a href="{% url 'dashboard' %}">Back</a>
+</body>
+</html>
